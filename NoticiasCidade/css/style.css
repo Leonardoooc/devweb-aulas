@@ -159,8 +159,13 @@ input {
 input.submit {
     width: 80px;
     color: #fff;
+    margin-top: 2px;
     background-color: #b10333;
     border: 2px solid #870529;
+}
+
+input.submit:hover {
+    cursor: pointer;
 }
 
 /*Footer*/
@@ -202,6 +207,7 @@ h3 {
 
 .entrevista h3 {
     background: #de003e;
+    color: #fff;
 }
 
 /*Formatando lista de notícias*/
