@@ -64,10 +64,26 @@ nav ul li a:hover {
 
 /* Principal 
 ------------------------------------ */
+#expopage #conteudo {
+	width: 710px;
+	float: left;
+	margin-bottom: 20px;
+	margin-top: 70px;
+}
+
 #conteudo {
 	width: 710px;
 	float: left;
 	margin-bottom: 20px;
+}
+
+#expopage aside {
+	width: 350px;
+	float: right;
+	background: #ebe7dd;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+	margin-top: 80px;
 }
 
 aside {
@@ -76,6 +92,12 @@ aside {
 	background: #ebe7dd;
 	padding-bottom: 30px;
 	margin-bottom: 20px;
+}
+
+section#expo {
+	background: #cdc8b1;
+	padding: 10px 27px 27px 27px;
+	margin-top: 10px;
 }
 
 section#visita {
@@ -107,7 +129,19 @@ article#video {
 	margin-left: 25px;
 }
 
+article#expo1{
+	float: left;
+	width: 310px;
+	margin-left: 25px;
+}
+
 article#mapa {
+	float: left;
+	width: 310px;
+	margin-left: 37px;
+}
+
+article#expo2{
 	float: left;
 	width: 310px;
 	margin-left: 37px;
@@ -119,10 +153,34 @@ article#exposicoes {
 	margin: 15px 0 0 25px;
 }
 
+article#expo3{
+	float: left;
+	width: 310px;
+	margin: 15px 0 0 25px;
+}
+
 article#historia {
 	float: left;
 	width: 310px;
 	margin: 15px 0 0 37px;
+}
+
+article#expo4{
+	float: left;
+	width: 310px;
+	margin: 15px 0 0 37px;
+}
+
+.caixa{
+    margin: 10px 0;
+    padding: 5px;
+    background: #f3f3f3 url(./img/fundo-caixa.png);
+}
+
+.caixa-conteudo {
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
 }
 
 h3 {
