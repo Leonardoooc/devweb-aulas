@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Campo Barba - Contato</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
+
 <body class="contato">
+	<header>
+		<div id="area-cabecalho">
 
-    <div id="area-cabecalho">
-
-        <div id="area-logo">
-            <h1><img src="./imagens/logo.png"></h1>
-        </div>
-        <div id="area-menu">
-            <a id="home" href="index.html">Home</a>
-            <a id="contato" href="contato.html">Contato</a>
-            <a id="sobre" href="sobre.html">Sobre</a>
-            <a id="login" href="login.html">Login</a>
-        </div>
-    </div>
-
-	<div id="area-principal">
-		
-		<div id="area-sobrenos">
-
-			<!-- abertura postagem -->
-			<div class="postagem-sobrenos">
-				<article id="sobrenos">
-					<h2>Contato!</h2>
-					<ul>
-						<li><p>Telefone: +55 (42)3446-1886</p></li>
-						<li><p>Email: campobarba@barbearia.com.br</p></li>
-						<li><p>Instagram: campo_barba</p></li>
-					</ul>
-				</article>
-				<span class="data-postagem"> </span>
-				<br>
-				<article id="localizacao">
-					<h2>Marque seu Horário</h3>
-						<span class="texto-sobrenos">Preencha o formulário para estarmos entrando em contato com voce!</span>
-						<br>
-						<form>
-							<label class="nome" for="fname"><strong>Nome:</strong></label><br>
-							<input type="text" id="nome" name="fname"><br><br>
-							<label class="email" for="lname"><strong>Email:</strong></label><br>
-							<input type="email" id="email" name="lname"><br><br>
-							<label class="celular" for="lname"><strong>Celular:</strong></label><br>
-							<input type="text" id="telefone" name="lname"><br><br>
-							<input type="submit" id="botao" value="Enviar">
-						</form>
-				</article>
+			<div id="area-logo">
+				<h1><img src="./imagens/logo.png"></h1>
+			</div>
+			<div id="area-menu">
+				<a id="home" href="index.html">Home</a>
+				<a id="contato" href="contato.html">Contato</a>
+				<a id="sobre" href="sobre.html">Sobre</a>
+				<a id="login" href="login.html">Login</a>
 			</div>
 		</div>
+	</header>
 
+	<main>
+		<div id="area-principal">
 
+			<div id="area-sobrenos">
+
+				<!-- abertura postagem -->
+				<div class="postagem-sobrenos">
+					<article id="sobrenos">
+						<h2>Contato!</h2>
+						<ul>
+							<li>
+								<p>Telefone: +55 (42)3446-1886</p>
+							</li>
+							<div id="emailcontato">
+								<li><a href="mailto:campobarba@barbearia.com.br">Email: campobarba@barbearia.com.br</a>
+								</li>
+							</div>
+							<li>
+								<p>Instagram: campo_barba</p>
+							</li>
+						</ul>
+					</article>
+					<span class="data-postagem"> </span>
+					<br>
+					<article id="localizacao">
+						<h2>Marque seu Horário</h3>
+							<span class="texto-sobrenos">Preencha o formulário para estarmos entrando em contato com
+								voce!</span>
+							<br>
+							<form>
+								<label class="nome" for="fname"><strong>Nome:</strong></label><br>
+								<input type="text" id="nome" name="fname"><br><br>
+								<label class="email" for="lname"><strong>Email:</strong></label><br>
+								<input type="email" id="email" name="lname"><br><br>
+								<label class="celular" for="lname"><strong>Celular:</strong></label><br>
+								<input type="text" id="telefone" name="lname"><br><br>
+								<input type="submit" id="botao" value="Enviar">
+							</form>
+					</article>
+				</div>
+			</div>
+	</main>
+
+	<footer>
 		<div id="rodape">
 			Todos os direitos reservados - Campo Barba
 		</div>
+	</footer>
 
 	</div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 </html>

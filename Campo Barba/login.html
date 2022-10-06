@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Campo Barba - Login</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
+
 <body class="login">
 
-    <div id="area-cabecalho">
+	<header>
+		<div id="area-cabecalho">
 
-        <div id="area-logo">
-            <h1><img src="./imagens/logo.png"></h1>
-        </div>
-        <div id="area-menu">
-            <a id="home" href="index.html">Home</a>
-            <a id="contato" href="contato.html">Contato</a>
-            <a id="sobre" href="sobre.html">Sobre</a>
-            <a id="login" href="login.html">Login</a>
-        </div>
-    </div>
-
- 
-	<div id="area-principal">
-        <div class="postagem-sobrenos">
-            <div class="caixa">
-					<h2>Login</h2>
-						<br>
-						<form>
-							<label class="nome" for="fname"><strong>Email:</strong></label><br>
-							<input type="email" id="email" name="fname"><br><br>
-							<label class="email" for="lname"><strong>Senha:</strong></label><br>
-							<input type="password" id="senha" name="lname"><br><br>
-							<input type="submit" id="botao" value="Entrar">
-						</form>
-                        <br>
-                        <br>
-                        <a href="">Cadastre-se</a>
-				</article>
+			<div id="area-logo">
+				<h1><img src="./imagens/logo.png"></h1>
+			</div>
+			<div id="area-menu">
+				<a id="home" href="index.html">Home</a>
+				<a id="contato" href="contato.html">Contato</a>
+				<a id="sobre" href="sobre.html">Sobre</a>
+				<a id="login" href="login.html">Login</a>
 			</div>
 		</div>
-    </div>    
+	</header>
 
+	<main>
+		<div id="area-principal">
+			<div class="postagem-sobrenos">
+				<div class="caixa">
+					<h2>Login</h2>
+					<br>
+					<form>
+						<label class="nome" for="fname"><strong>Email:</strong></label><br>
+						<input type="email" id="email" name="fname"><br><br>
+						<label class="email" for="lname"><strong>Senha:</strong></label><br>
+						<input type="password" id="senha" name="lname"><br><br>
+						<input type="submit" id="botao" value="Entrar">
+					</form>
+					<br>
+					<br>
+					<nav><a href="cadastro.html">Cadastre-se</a></nav>
+					</article>
+				</div>
+			</div>
+		</div>
+	</main>
 
+	<footer>
 		<div id="rodape">
 			Todos os direitos reservados - Campo Barba
 		</div>
-
+	</footer>
 	</div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 </html>
