@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function ex1() {
+            let idade = window.prompt(`Digite sua idade:`,`xx`);
+            if (idade < 15) document.write(`<p>Criança</p>`);
+            if (idade >= 15 && idade < 30) document.write(`<p>Jovem</p>`);
+            if (idade >= 30 && idade < 60) document.write(`<p>Adulto</p>`);
+            if (idade >= 60) document.write(`<p>Idoso</p>`);
+        }
+    </script>
+
+    <script>
+        function ex2() {
+            let name = window.prompt(`Digite seu nome:`);
+            let altura = window.prompt(`Digite sua altura em cm:`);
+            let peso = window.prompt(`Informe seu peso em kg:`);
+
+            altura = parseFloat(altura)/100;
+            let imc = parseInt(peso) / (altura*altura);
+            let classificacao;
+            if (imc < 16) classificacao = " Baixo peso muito grave ";
+            if (imc >= 16 && imc < 17) classificacao = " Baixo peso grave ";
+            if (imc >= 17 && imc < 18.5) classificacao = " Baixo peso ";
+            if (imc >= 18.5 && imc < 25 ) classificacao = " Peso normal ";
+            if (imc >= 25 && imc < 30 ) classificacao = " Sobrepeso ";
+            if (imc >= 30 && imc < 35 ) classificacao = " Obesidade grau I ";
+            if (imc >= 35 && imc < 40 ) classificacao = " Obesidade grau II ";
+            if (imc >= 40 ) classificacao = " Obesidade grau III ";
+            document.write(`<p> ${name} possui indice de massa corporal igual a ${imc.toFixed(2)} sendo classificado como:${classificacao}`);
+        }
+    </script>
+
+    <script>
+
+        let valor1 = window.prompt(`Digite um valor:`);
+        let tipo = window.prompt(`Digite o tipo:`, `soma/subtração`);
+        let valor2 = window.prompt(`Digite outro valor:`);
+
+        let result = calculo(valor1, tipo, valor2);
+        document.write(`<p> Resultado: ${result}</p>`);
+
+        function calculo(valor1, tipo, valor2) {
+            //if (tipo === 'soma') return parseInt(valor1) + parseInt(valor2);
+            //if (tipo === 'subtração') return parseInt(valor1) - parseInt(valor2);
+            
+            let result = tipo === 'soma' ? parseInt(valor1) + parseInt(valor2) : parseInt(valor1) - parseInt(valor2);
+            return result;
+        }
+    </script>
+</body>
+</html>

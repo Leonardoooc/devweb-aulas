@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        document.write(`<h2>O método <code> write()</code></h2>`);
+        document.write(`<p> O método <code>write()</code> do objeto <code>document</code> destina-se a escrever marcação HTML com uso do JS</p>`);
+        let data = window.prompt(`Digite sua data de nascimento:`,`dd/mm/aaaa`);
+        let dia_mes = "";
+        for (i=0;i<5;i++) dia_mes += data[i];
+        document.write(`Seu aniversário é em ${data}`);
+    </script>
+
+    <button onclick="window.open('https://www.google.com','_blank','width=200, height=200');">
+        Abrir Janela
+    </button>
+</body>
+</html>
