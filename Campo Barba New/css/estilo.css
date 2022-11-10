@@ -346,6 +346,18 @@ article#sobrenos {
 
 }
 
+.horario{
+	color: #f7b600;
+	padding-right: 265px;
+
+}
+
+.data{
+	color: #f7b600;
+	padding-right: 280px;
+
+}
+
 .nome{
 	color: #f7b600;
 	padding-right: 270px;
@@ -392,6 +404,14 @@ article#sobrenos {
 	transition: all 0.5s;
 	padding-left: 1%;
 	color: white;
+	height: 37px;
+	font-size: 1.1em;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: white;
+	font-size: 0.9em;
+	opacity: 0.8; /* Firefox */
 }
 
 body.home a#home,

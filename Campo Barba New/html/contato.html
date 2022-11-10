@@ -16,8 +16,9 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
 
-    <link rel="icon" href="imagens/favicon.png">
+    <link rel="icon" href="../imagens/favicon.png">
 </head>
 
 <body>
@@ -86,12 +87,16 @@
                                             <br>
                                             <form>
                                                 <label class="nome" for="fname"><strong>Nome:</strong></label><br>
-                                                <input type="text" class="formulario" name="fname"><br><br>
+                                                <input type="text" class="formulario" name="fname" placeholder="Digite seu nome" id="inputnome"><br><br>
                                                 <label class="email" for="lname"><strong>Email:</strong></label><br>
-                                                <input type="email" class="formulario" name="lname"><br><br>
+                                                <input type="email" class="formulario" name="lname" placeholder="email@example.com" id="inputemail"><br><br>
                                                 <label class="celular" for="lname"><strong>Celular:</strong></label><br>
-                                                <input type="text" class="formulario" name="lname"><br><br>
-                                                <input type="submit" id="botao" value="Enviar">
+                                                <input type="text" class="formulario" name="lname" placeholder="Escreva seu telefone (XX) XXXXX-XXXX" id="inputcel"><br><br>
+                                                <label class="data" for="lname"><strong>Data:</strong></label><br>
+                                                <input type="text" class="formulario" name="lname" placeholder="XX/XX/XXXX" id="inputdata"><br><br>
+                                                <label class="horario" for="lname"><strong>Horario:</strong></label><br>
+                                                <input type="text" class="formulario" name="lname" placeholder="XX:XX" id="inputhorario"><br><br>
+                                                <input type="button" id="botao" value="Enviar" onclick="sendHorario()">
                                             </form>
                                     </article>
                                 </div>
@@ -155,6 +160,37 @@
 
     </div>
 </body>
+<script>
+    function sendHorario() {
+        let nome = document.getElementById('inputnome').value;
+        let email = document.getElementById('inputemail').value;
+        let celular = document.getElementById('inputcel').value;
+        let data = document.getElementById('inputdata').value;
+        let horario = document.getElementById('inputhorario').value;
+        data = data.replace('/', '-');
+        data = data.replace('/', '-');
+        let dataSplit = data.split('-');
+        var day = dataSplit[0];
+        var month = dataSplit[1];
+        var ano = dataSplit[2];
+        data = `${ano}-${month}-${day}`;
+        let dateResult = dateIsValid(new Date(data));
+        if (!dateResult) {
+            alert("Formato de data inválida.");
+        }
+        
+        alert(validateTime(horario));
+
+    }
+
+
+    function dateIsValid(date) {
+        return date instanceof Date && !isNaN(date);
+    }
+
+    
+
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
