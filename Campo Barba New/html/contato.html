@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Spotify</title>
+    <title>Campo Barba</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
 
-    <link rel="icon" href="../imagens/favicon.png">
+    <link rel="icon" href="../imagens/logo.png">
 </head>
 
 <body>
@@ -93,7 +93,7 @@
                                                 <label class="celular" for="lname"><strong>Celular:</strong></label><br>
                                                 <input type="text" class="formulario" name="lname" placeholder="Escreva seu telefone (XX) XXXXX-XXXX" id="inputcel"><br><br>
                                                 <label class="data" for="lname"><strong>Data:</strong></label><br>
-                                                <input type="text" class="formulario" name="lname" placeholder="XX/XX/XXXX" id="inputdata"><br><br>
+                                                <input type="text" class="formulario" name="lname" placeholder="dd/mm/aaaa" id="inputdata"><br><br>
                                                 <label class="horario" for="lname"><strong>Horario:</strong></label><br>
                                                 <input type="text" class="formulario" name="lname" placeholder="XX:XX" id="inputhorario"><br><br>
                                                 <input type="button" id="botao" value="Enviar" onclick="sendHorario()">
@@ -120,10 +120,10 @@
                 <div class="col-md-2">
                     <h4>Campo Barba</h4>
                     <ul class="navbar-nav">
-                        <li><a href="">Login</a></li>
-                        <li><a href="">Agendamentos</a></li>
-                        <li><a href="">Horários</a></li>
-                        <li><a href="">Funcionamento</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="contato.html">Contatos</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -175,12 +175,11 @@
         var ano = dataSplit[2];
         data = `${ano}-${month}-${day}`;
         let dateResult = dateIsValid(new Date(data));
+        if (nome == "" || email == "" || celular == "" || data == "" || horario == "") return alert("Preencha todos os campos.");
         if (!dateResult) {
-            alert("Formato de data inválida.");
+            return alert("Formato de data inválida.");
         }
-        
-        alert(validateTime(horario));
-
+        window.location.href = "./pagamento.html";
     }
 
 

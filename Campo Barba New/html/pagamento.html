@@ -58,18 +58,66 @@
                         <div id="area-principal">
                             <div class="postagem-sobrenos">
                                 <div class="caixa">
-                                    <h2 class="titulosecundario">Login</h2>
+                                    <h2 class="titulosecundario">Pagamento</h2>
                                     <br>
+                                    <h3 class="titulosecundario">Valores</h3>
+                                    <table class="table" style="color: white">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Corte</th>
+                                            <th scope="col">Cabelo</th>
+                                            <th scope="col">Barba</th>
+                                            <th scope="col">Cabelo e Barba</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">Valor</th>
+                                            <td>R$ 30,00</td>
+                                            <td>R$ 20,00</td>
+                                            <td>R$ 45,00</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+
+                                    <br>
+                                    <h3 class="titulosecundario">Selecione sua Opção</h3>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dinheiro" value="option1">
+                                        <label class="form-check-label textoptions optionspagamento" for="inlineRadio1">Dinheiro</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cartao" value="option2">
+                                        <label class="form-check-label textoptions optionspagamento" for="inlineRadio2">Cartão</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pix" value="option3">
+                                        <label class="form-check-label textoptions optionspagamento" for="inlineRadio3">Pix</label>
+                                      </div>
+
+                                      <br><br>
+
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="cabelo" value="option_1">
+                                        <label class="form-check-label textoptions optionspagamento" for="inlineRadio1">Cabelo</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="barba" value="option_2">
+                                        <label class="form-check-label textoptions optionspagamento" for="inlineRadio2">Barba</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="cabeloebarba" value="option_3">
+                                        <label class="form-check-label textoptions optionspagamento" for="inlineRadio3">Cabelo e Barba</label>
+                                      </div>
+                                      <br>
                                     <form>
-                                        <label class="nome" for="fname"><strong>Email:</strong></label><br>
-                                        <input type="email" class="formulario" name="fname" id="email"><br><br>
-                                        <label class="email" for="lname"><strong>Senha:</strong></label><br>
-                                        <input type="password" class="formulario" name="lname" id="password"><br><br>
-                                        <input type="button" id="botao" value="Entrar" onclick="login()">
+                                        <input type="button" id="botao" value="Calcular" onclick="calcular()" style="margin-top: 50px;">
                                     </form>
                                     <br>
                                     <br>
-                                    <nav class="align-self-center"><a class="link" href="cadastro.html">Cadastre-se</a></nav>
+
+                                    <p class="optionspagamento link" id="valor"></p>
                                     </article>
                                 </div>
                             </div>
@@ -132,13 +180,25 @@
 </body>
 
 <script>
-    function login() {
-        let pass = document.getElementById('password').value;
-        let email = document.getElementById('email').value;
-        if (pass == "" || email == "") return alert("Preencha todos os campos.");
-        if (email !== 'campobarba@exemplo.com' || pass !== "abc") return alert("Email ou senha incorretos.");
-        window.location.href = './index.html';
-        alert("Logado com sucesso.");
+    function calcular() {
+        let dinheiro = document.getElementById('dinheiro').checked;
+        let cartao = document.getElementById('cartao').checked;
+        let pix = document.getElementById('pix').checked;
+        let cabelo = document.getElementById('cabelo').checked;
+        let barba = document.getElementById('barba').checked;
+        let cabeloebarba = document.getElementById('cabeloebarba').checked;
+        if (!dinheiro && !cartao && !pix) return alert("Você deve selecionar um método de pagamento.");
+        if (!cabelo && !barba && !cabeloebarba) return alert("Você deve selecionar um tipo de corte.");
+
+        let vfinal;
+
+        if (cabelo) vfinal = 30.0;
+        if (barba) vfinal = 20.0;
+        if (cabeloebarba) vfinal = 45.0;
+
+        if(cartao) vfinal = parseFloat(vfinal + (vfinal*0.10));
+        if(pix) vfinal = parseFloat(vfinal - (vfinal*0.10));
+        document.getElementById('valor').innerHTML = `R$: ${vfinal.toFixed(2)}`;
     }
 </script>
 
